@@ -1,9 +1,7 @@
 <?php
-
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 require 'vendor/autoload.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -114,11 +112,11 @@ require 'vendor/autoload.php';
 <?php
 
 // Caminho do arquivo
-$arquivoClear = 'C:/xamp 8/htdocs/dashboard/minerador/dados_em_tempo_real.csv';
+$arquivoClear = 'dados_em_tempo_real.csv';
 file_put_contents($arquivoClear, '');
 
 // Caminho do arquivo
-$arquivo = 'C:/xamp 8/htdocs/dashboard/minerador/data_received.txt';
+$arquivo = 'data_received.txt';
 
 
 // Caminho do arquivo de cancelamento
