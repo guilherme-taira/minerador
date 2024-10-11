@@ -112,11 +112,11 @@ require 'vendor/autoload.php';
 <?php
 
 // Caminho do arquivo
-$arquivoClear = 'dados_em_tempo_real.csv';
+$arquivoClear = '/var/www/html/minerador/dados_em_tempo_real.csv';
 file_put_contents($arquivoClear, '');
 
 // Caminho do arquivo
-$arquivo = 'data_received.txt';
+$arquivo = '/var/www/html/minerador/data_received.txt';
 
 
 // Caminho do arquivo de cancelamento
@@ -132,7 +132,7 @@ if (file_exists($arquivo)) {
 }
 
 // Caminho da pasta onde os arquivos estão
-$directory = 'C:/xamp 8/htdocs/dashboard/minerador/';
+$directory = '/var/www/html/minerador/';
 
 // Verifica se o diretório existe
 if (!is_dir($directory)) {
@@ -324,7 +324,7 @@ if (file_exists($zipFile)) {
     hideLoading();
 
     function checkFile() {
-        fetch('checkFile.php')  // Faz a requisição para o PHP
+        fetch('/minerador/checkFile.php')  // Faz a requisição para o PHP
             .then(response => response.json()) // Converte a resposta em JSON
             .then(data => {
                 // console.log(data);
@@ -334,14 +334,14 @@ if (file_exists($zipFile)) {
                     if (!document.querySelector('.baixar .download-button')) {
                         pageProgressBar.innerHTML = 'Todas as páginas processadas!';
 
-                        const downloadButton = document.createElement('a');
-                        downloadButton.href = 'http://localhost/dashboard/minerador/minerados_links.zip';
-                        downloadButton.textContent = 'Baixar Arquivo Zip';
-                        downloadButton.classList.add('btn', 'btn-success', 'col-12', 'btn-block', 'mt-3', 'download-button'); // Adiciona classes de estilo e uma classe única
-                        downloadButton.setAttribute('download', 'minerados_links.zip'); // Garante que o arquivo seja baixado
+                        // const downloadButton = document.createElement('a');
+                        // downloadButton.href = 'http://localhost/dashboard/minerador/minerados_links.zip';
+                        // downloadButton.textContent = 'Baixar Arquivo Zip';
+                        // downloadButton.classList.add('btn', 'btn-success', 'col-12', 'btn-block', 'mt-3', 'download-button'); // Adiciona classes de estilo e uma classe única
+                        // downloadButton.setAttribute('download', 'minerados_links.zip'); // Garante que o arquivo seja baixado
 
-                        // Adiciona o botão ao DOM, por exemplo, abaixo da barra de progresso
-                        document.querySelector('.baixar').appendChild(downloadButton);
+                        // // Adiciona o botão ao DOM, por exemplo, abaixo da barra de progresso
+                        // document.querySelector('.baixar').appendChild(downloadButton);
 
                         // Tira o loading e para o intervalo
                         hideLoading();
@@ -448,7 +448,7 @@ if (file_exists($zipFile)) {
                 alert('Por favor, insira ao menos um link.');
             }
 
-            fetch('http://localhost/dashboard/minerador/builder.php', {
+            fetch('/minerador/builder.php', {
                 method: 'POST',
                 body: formData
             })
@@ -460,7 +460,7 @@ if (file_exists($zipFile)) {
             const progressBar = document.getElementById('progressBar');
             const maxPages = document.getElementById('paginas').value;
             let interval = setInterval(() => {
-            fetch('http://localhost/dashboard/minerador/process.php', {
+            fetch('/minerador/process.php', {
                     method: 'GET', // Especifica o método GET
                     headers: {
                         'Content-Type': 'application/json' // Define o cabeçalho da requisição
