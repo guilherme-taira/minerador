@@ -1,0 +1,99 @@
+  [sale_price] => Array
+(
+[amount] => 128.76
+[currency_id] => BRL
+[fallback] => 
+[metadata] => Array
+(
+[campaign_discount_percentage] => 13
+[campaign_end_date] => 2024-10-01T02:00:00Z
+[campaign_id] => P-MLB14219310
+[discount_meli_amount] => 4.44
+[order_item_price] => 128.76
+[promotion_id] => OFFER-MLB4955251392-10905556855
+[promotion_type] => marketplace_campaign
+[reference_price_type] => promotion
+)
+
+[regular_amount] => 148
+)
+
+
+---
+
+
+     [power_seller_status] => platinum
+    [price] => 74.56
+    [pushing_puis] => 
+    [reputation_level] => 5_green
+    [review_rate] => 4
+    [reviews] => Array
+        (
+            [attributes_quantity] => 4
+            [count] => 5283
+            [pictures_quantity] => 46
+            [qualitative_attributes] => Array
+                (
+
+---
+
+
+[rating] => Array
+(
+    [amount] => 5283
+    [aria_label] => Avaliação 4.4 de 5. 5,283 opiniões.
+    [average] => 4.4
+    [levels] => Array
+        (
+            [0] => Array
+                (
+                    [index] => 0
+                    [percentage] => 72.91
+                    [value] => 3852
+                )
+
+            [1] => Array
+                (
+                    [index] => 1
+                    [percentage] => 11.98
+                    [value] => 633
+                )
+
+            [2] => Array
+                (
+                    [index] => 2
+                    [percentage] => 6.04
+                    [value] => 319
+                )
+
+            [3] => Array
+                (
+                    [index] => 3
+                    [percentage] => 1.99
+                    [value] => 105
+                )
+
+            [4] => Array
+                (
+                    [index] => 4
+                    [percentage] => 7.08
+                    [value] => 374
+                )
+
+        )
+
+    [rating_average_formatted] => 4.4
+    [should_hide_button_all_reviews] => 
+    [stars] => 4.5
+    [text] => 5,283 avaliações
+    [track] => Array
+        (
+            [event_data] => Array
+                (
+                    [catalog_product_id] => MLB24332158
+                )
+
+            [path] => /reviews/alltop/clic
+        )
+
+)
